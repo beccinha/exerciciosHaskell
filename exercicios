@@ -1,0 +1,12 @@
+-- funcao para buscar um elemento de uma lista
+elementAt :: [a] -> Int -> a
+elementAt (h:t) x = if (x==1) then h 
+                             else elementAt t (x-1)
+ 
+ -- funcao para reverter uma lista
+ myReverse :: [a] -> [a]
+myReverse [] = []
+myReverse [a] = [a]
+myReverse (h:t) = myReverse t ++ [h]
+
+-- funcao para o palindromo
