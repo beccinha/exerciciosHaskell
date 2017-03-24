@@ -25,3 +25,9 @@ compress (h:t) | h == head t = compress t
                | True = h :compress t 
  
 --funcao para separar os elementos repidos seguidos
+pack :: (Eq a) => [a] -> [[a]]
+pack [] = []
+pack [x] = [[x]]
+pack (x:xs) = if x `elem` (head (pack xs))
+              then (x:(head (pack xs))):(tail (pack xs))
+              else [x]:(pack xs)
