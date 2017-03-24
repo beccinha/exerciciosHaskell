@@ -1,0 +1,1 @@
+# exerciciosHaskell.hs
